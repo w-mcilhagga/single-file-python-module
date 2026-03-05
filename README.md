@@ -2,6 +2,7 @@
 
 Suppose you have a single file python module `mymodule.py`. Maybe like this:
 
+#### `mymodule.py`:
 ```python
 def hello():
     print("Hello from my simple module")
