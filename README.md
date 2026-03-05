@@ -49,7 +49,7 @@ py -m pip uninstall mymodule
 
 ## 2. Distributing it without PyPI.
 
-To distribute your module, you just need to host it on github (like `mymodule` one is) and tell people to install it from a URL. 
+To distribute your module, you just need to host it on github (like `mymodule` is) and tell people to install it from a URL. 
 If you want to install `mymodule` from **this** repository, the command is:
 ```
 py -m pip install git+https://github.com/w-mcilhagga/single-file-python-module.git
