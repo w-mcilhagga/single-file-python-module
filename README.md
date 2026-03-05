@@ -1,7 +1,6 @@
 # Installing a single file python module
 
-Suppose you have a single file python module `mymodule.py`.
-Maybe like this:
+Suppose you have a single file python module `mymodule.py`. Maybe like this:
 
 ```python
 def hello():
@@ -10,7 +9,7 @@ def hello():
 
 How can you
 1. Install it on your own computer so you can just import it into all your other projects?
-2. Distribute it to others without going through PyPI (because let's face it, it isn't a really good module)?
+2. Distribute it to others without going through PyPI (because let's face it, it isn't really all that great)?
 
 ## 1. Installing it on your own computer.
 A google for how to install a python script brings up a whole lot about `pyproject.toml`, packages, `__init__.py` and so on. 
