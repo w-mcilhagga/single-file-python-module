@@ -26,11 +26,11 @@ setup(name="mymodule", version="0.0", author="me", py_modules=["mymodule"])
 Then in a terminal, go to the folder holding both the `mymodule.py` and `setup.py` files and type (on windows):
 
 ```
-py -m pip install ./
+py -m pip install .
 ```
 or
 ```
-py -m pip install -e ./
+py -m pip install -e .
 ```
 The `-e` makes an "editable" install, which allows you to change and edit the module without needing to reinstall it.  Whichever install you do, you
 can now import `mymodule` and use it, anywhere, e.g
