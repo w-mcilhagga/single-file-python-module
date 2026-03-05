@@ -31,8 +31,17 @@ or
 ```
 py -m pip install -e ./
 ```
-The second case makes an editable install, which allows you to work on the module without reinstalling it.  If you decide your module sucks, just ininstall it with
+The second case makes an editable install, which allows you to work on the module without reinstalling it.  Whichever install you do, you
+can now import `mymodule` and use it, anywhere, e.g
 
+```python
+from mymodule import hello
+
+hello()
+```
+That's it!
+
+If you decide your module sucks, just ininstall it with
 ```
 py -m pip uninstall mymodule
 ```
