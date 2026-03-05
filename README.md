@@ -58,7 +58,7 @@ For your own module, just replace the `w-mcilhagga/single-file-python-module` wi
 
 ## Dependencies.
 
-What if your single file python module imports some other package outside of the standard library, and maybe a specific
+What if your single file python module imports some package outside of the standard library, and maybe needs a specific
 python version? Then you need to change your `setup.py` to 
 include this information. For example, if you need python version 3.10 or later, and say, the [wikipedia](https://pypi.org/project/wikipedia/) package, 
 then your `setup.py` file should look like this:
