@@ -13,8 +13,8 @@ How can you
 2. Distribute it to others without going through PyPI (because let's face it, it isn't a really good module)?
 
 ## 1. Installing it on your own computer.
-
-All you need is a simple `setup.py` file in the same folder as your `mymodule.py` file:
+A google for how to install a python script brings up a whole lot about `pyproject.toml`, packages, `__init__.py` and so on. 
+**Not necessary**, and overkill for a single file. All you need is a simple `setup.py` file in the same folder as your `mymodule.py` file:
 
 ```python
 from setuptools import setup
@@ -22,7 +22,7 @@ from setuptools import setup
 setup(name="mymodule", version="0.0", author="me", py_modules=["mymodule"])
 ```
 (Here, and everywhere else, replace the name "mymodule" with whatever your module is actually called.) 
-Then, in a terminal open inside the folder holding both the `mymodule.py` and `setup.py` files and type
+Then in a terminal, go to the folder holding both the `mymodule.py` and `setup.py` files and type (on windows):
 
 ```
 py -m pip install ./
@@ -31,7 +31,7 @@ or
 ```
 py -m pip install -e ./
 ```
-The second case makes an editable install, which allows you to work on the module without reinstalling it.  Whichever install you do, you
+The `-e` makes an "editable" install, which allows you to work on the module without reinstalling it.  Whichever install you do, you
 can now import `mymodule` and use it, anywhere, e.g
 
 ```python
@@ -53,6 +53,25 @@ You just need to host your module on github and tell people to install it from t
 py -m pip install git+https://github.com/w-mcilhagga/single-file-python-module.git
 ```
 
+## Dependencies.
+
+What if your single file python module imports some other package outside of the standard library? Then you need to change your `setup.py` to 
+say what those dependencies are. For example, if you need python version 3.10 or later, and say, wikipedia, then your `setup.py` file should look like this:
+
+```python
+from setuptools import setup
+
+setup(
+    name="mymodule",
+    version="0.0",
+    author="me",
+    py_modules=["mymodule"],
+    python_requires=">=3.10",
+    install_requires=["wikipedia"],
+)
+```
+Again, you can get involved with `pypackage.toml`, `setup.cfg` and whatnot, but it's only a single file module, so why? More details about theses
+options can be found on the [setuptools page](https://setuptools.pypa.io/en/latest/userguide/dependency_management.html#declaring-dependencies).
 
 ## References.
 I originally found this on [George Shuklin's Medium site](https://medium.com/opsops/packaging-a-single-module-in-python-e8d4388c4664). 
