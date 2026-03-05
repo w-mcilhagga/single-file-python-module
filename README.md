@@ -78,7 +78,7 @@ options can be found on the [setuptools page](https://setuptools.pypa.io/en/late
 
 ## References.
 I originally found this information on [George Shuklin's Medium site](https://medium.com/opsops/packaging-a-single-module-in-python-e8d4388c4664)
-so :thumbsup:. 
+so :thumbsup: to him. 
 The official documentation for this is at [Setuptools](https://setuptools.pypa.io/en/latest/deprecated/distutils/setupscript.html) which
 is "deprecated" but only because more up to date information isn't yet available.
 
