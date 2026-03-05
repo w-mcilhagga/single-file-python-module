@@ -5,7 +5,7 @@ Maybe like this:
 
 ```python
 def hello():
-    print('Hello from my simple module')
+    print("Hello from my simple module")
 ```
 
 How can you
