@@ -1,5 +1,4 @@
-# single-file-python-module
-How to install and distrubute a single file python module.
+# Installing a single file python module
 
 Suppose you have a single file python module `mymodule.py`, in a folder `mymodule` (althought the folder name doesn't matter).
 Maybe like this:
