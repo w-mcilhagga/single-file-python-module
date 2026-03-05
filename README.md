@@ -73,8 +73,8 @@ setup(
     install_requires=["wikipedia"],
 )
 ```
-Again, you can get involved with `pypackage.toml`, `setup.cfg` and whatnot, but it's only a single file module, but why would you want to hurt
-yourself? 
+Again, you can get involved with `pypackage.toml`, `setup.cfg` and whatnot, but it's only a single file module, so why would you want to cause
+yourself so much pain? 
 
 More details about these
 options can be found on the [setuptools page](https://setuptools.pypa.io/en/latest/userguide/dependency_management.html#declaring-dependencies).
