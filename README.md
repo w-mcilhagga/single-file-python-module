@@ -73,7 +73,7 @@ setup(
     install_requires=["wikipedia"],
 )
 ```
-Again, you can get involved with `pypackage.toml`, `setup.cfg` and whatnot, but it's only a single file module, so why? More details about theses
+Again, you can get involved with `pypackage.toml`, `setup.cfg` and whatnot, but it's only a single file module, so why? More details about these
 options can be found on the [setuptools page](https://setuptools.pypa.io/en/latest/userguide/dependency_management.html#declaring-dependencies).
 
 ## References.
