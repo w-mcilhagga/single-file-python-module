@@ -1,6 +1,6 @@
 # Installing a single file python module
 
-Suppose you have a single file python module `mymodule.py`, in a folder `mymodule` (althought the folder name doesn't matter).
+Suppose you have a single file python module `mymodule.py`.
 Maybe like this:
 
 ```python
