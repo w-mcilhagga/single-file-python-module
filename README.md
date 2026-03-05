@@ -2,7 +2,7 @@
 
 Suppose you have a single file python module `mymodule.py`. Maybe like this:
 
-#### `mymodule.py`:
+##### `mymodule.py`:
 ```python
 def hello():
     print("Hello from my simple module")
@@ -16,6 +16,7 @@ How can you
 A google for how to install a python script brings up a whole lot about `pyproject.toml`, packages, `__init__.py` and so on. 
 **Not necessary**, and overkill for a single file. All you need is a simple `setup.py` file in the same folder as your `mymodule.py` file:
 
+##### `setup.py`:
 ```python
 from setuptools import setup
 
