@@ -48,8 +48,8 @@ py -m pip uninstall mymodule
 
 ## 2. Distributing it without PyPI.
 
-You just need to host your module on github and tell people to install it from the URL. If you want to install `mymodule` 
-from **this** repository, the command is:
+To distribute your module, you just need to host it on github (like `mymodule` one is) and tell people to install it from a URL. 
+If you want to install `mymodule` from **this** repository, the command is:
 ```
 py -m pip install git+https://github.com/w-mcilhagga/single-file-python-module.git
 ```
@@ -57,8 +57,9 @@ For your own module, just replace the `w-mcilhagga/single-file-python-module` wi
 
 ## Dependencies.
 
-What if your single file python module imports some other package outside of the standard library? Then you need to change your `setup.py` to 
-say what those dependencies are. For example, if you need python version 3.10 or later, and say, [wikipedia](https://pypi.org/project/wikipedia/), 
+What if your single file python module imports some other package outside of the standard library, and maybe a specific
+python version? Then you need to change your `setup.py` to 
+include this information. For example, if you need python version 3.10 or later, and say, the [wikipedia](https://pypi.org/project/wikipedia/) package, 
 then your `setup.py` file should look like this:
 
 ```python
@@ -80,7 +81,7 @@ More details about these
 options can be found on the [setuptools page](https://setuptools.pypa.io/en/latest/userguide/dependency_management.html#declaring-dependencies).
 
 ## References.
-I originally found this information on [George Shuklin's Medium site](https://medium.com/opsops/packaging-a-single-module-in-python-e8d4388c4664)
+I originally found this information on [George Shuklin's blog](https://medium.com/opsops/packaging-a-single-module-in-python-e8d4388c4664)
 so :thumbsup: to him. 
 The official documentation for this is at [Setuptools](https://setuptools.pypa.io/en/latest/deprecated/distutils/setupscript.html) which
 is "deprecated" but only because more up to date information isn't yet available.
