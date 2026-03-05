@@ -48,15 +48,18 @@ py -m pip uninstall mymodule
 
 ## 2. Distributing it without PyPI.
 
-You just need to host your module on github and tell people to install it from the URL. If you want to install `mymodule` the command is:
+You just need to host your module on github and tell people to install it from the URL. If you want to install `mymodule` 
+from **this** repository, the command is:
 ```
 py -m pip install git+https://github.com/w-mcilhagga/single-file-python-module.git
 ```
+For your own module, just replace the `w-mcilhagga/single-file-python-module` with the repo you want.
 
 ## Dependencies.
 
 What if your single file python module imports some other package outside of the standard library? Then you need to change your `setup.py` to 
-say what those dependencies are. For example, if you need python version 3.10 or later, and say, wikipedia, then your `setup.py` file should look like this:
+say what those dependencies are. For example, if you need python version 3.10 or later, and say, [wikipedia](https://pypi.org/project/wikipedia/), 
+then your `setup.py` file should look like this:
 
 ```python
 from setuptools import setup
