@@ -50,9 +50,9 @@ py -m pip uninstall mymodule
 
 You just need to host your module on github and tell people to install it from the URL. If you want to install `mymodule` the command is:
 ```
-py -m pip install pip install git+https://github.com/w-mcilhagga/single-file-python-module.git
+py -m pip install git+https://github.com/w-mcilhagga/single-file-python-module.git
 ```
-**NB this still doesn't work, fixing it**
+
 
 ## References.
 I originally found this on [George Shuklin's Medium site](https://medium.com/opsops/packaging-a-single-module-in-python-e8d4388c4664). 
