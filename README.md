@@ -32,7 +32,17 @@ or
 ```
 py -m pip install -e .
 ```
-The `-e` makes an "editable" install, which allows you to change and edit the module without needing to reinstall it.  Whichever install you do, you
+The `-e` makes an "editable" install, which allows you to change and edit the module without needing to reinstall it.  Note that pylance
+syntax checker has problems with this, so you might need to do
+```
+pip install -e . --config-settings editable_mode=compat
+```
+or
+```
+pip install -e . --config-settings editable_mode=strict
+```
+
+Whichever install you do, you
 can now import `mymodule` and use it, anywhere, e.g
 
 ```python
