@@ -32,15 +32,7 @@ or
 ```
 py -m pip install -e .
 ```
-The `-e` makes an "editable" install, which allows you to change and edit the module without needing to reinstall it.  I have found that the pylance syntax checker in Visual Studio Code has problems with this (it can't find the module), so you might need to do
-```
-pip install -e . --config-settings editable_mode=compat
-```
-(which works for me) or
-```
-pip install -e . --config-settings editable_mode=strict
-```
-to keep it happy. 
+The `-e` makes an "editable" install, which allows you to change and edit the module without needing to reinstall it.  
 
 Whichever install you do, you can now import `mymodule` and use it, anywhere, e.g
 
@@ -55,6 +47,21 @@ If you decide your module sucks, just ininstall it with
 ```
 py -m pip uninstall mymodule
 ```
+
+### VS Code.
+
+I have found that the pylance syntax checker in Visual Studio Code has problems with the install (it says it can't find the module), so you might need to do
+```
+pip install -e . --config-settings editable_mode=compat
+```
+(which works for me) or
+```
+pip install -e . --config-settings editable_mode=strict
+```
+to keep it happy.
+
+I guess this is an issue between the people working on setup.py, pylance, and VS Code, far too many of which **aren't being paid** but if the python installation can find the module, then pylance should really be able to as well. 
+
 
 ## 2. Distributing it without PyPI.
 
