@@ -32,8 +32,7 @@ or
 ```
 py -m pip install -e .
 ```
-The `-e` makes an "editable" install, which allows you to change and edit the module without needing to reinstall it.  Note that pylance
-syntax checker has problems with this, so you might need to do
+The `-e` makes an "editable" install, which allows you to change and edit the module without needing to reinstall it.  I have found that the pylance syntax checker in Visual Studio Code has problems with this (it can't find the module), so you might need to do
 ```
 pip install -e . --config-settings editable_mode=compat
 ```
@@ -41,9 +40,9 @@ or
 ```
 pip install -e . --config-settings editable_mode=strict
 ```
+to keep it happy. 
 
-Whichever install you do, you
-can now import `mymodule` and use it, anywhere, e.g
+Whichever install you do, you can now import `mymodule` and use it, anywhere, e.g
 
 ```python
 from mymodule import hello
@@ -59,18 +58,19 @@ py -m pip uninstall mymodule
 
 ## 2. Distributing it without PyPI.
 
-To distribute your module, you just need to host it on github (like `mymodule` is) and tell people to install it from a URL. 
+To distribute your module, you just need to host it on github (or similar) and tell people to install it from a URL. 
 If you want to install `mymodule` from **this** repository, the command is:
 ```
 py -m pip install git+https://github.com/w-mcilhagga/single-file-python-module.git
 ```
 For your own module, just replace the `w-mcilhagga/single-file-python-module` with the repo you want.
 
+If you aren't using github, I assume you can figure out the right command for whatever repo you are using.
+
 ## Dependencies.
 
 What if your single file python module imports some package outside of the standard library, and maybe needs a specific
-python version? Then you need to change your `setup.py` to 
-include this information. For example, if you need python version 3.10 or later, and say, the [wikipedia](https://pypi.org/project/wikipedia/) package, 
+python version? Then you need to change your `setup.py` to  include this information. For example, if you need python version 3.10 or later, and say, the [wikipedia](https://pypi.org/project/wikipedia/) package, 
 then your `setup.py` file should look like this:
 
 ```python
@@ -85,8 +85,7 @@ setup(
     install_requires=["wikipedia"],
 )
 ```
-Again, you can get involved with `pypackage.toml`, `setup.cfg` and whatnot, but it's only a single file module, so why would you want to cause
-yourself so much pain? 
+Again, you can get involved with `pypackage.toml`, `setup.cfg` and whatnot, but it's only a single file module, so why would you want to cause yourself so much pain? 
 
 More details about these
 options can be found on the [setuptools page](https://setuptools.pypa.io/en/latest/userguide/dependency_management.html#declaring-dependencies).
