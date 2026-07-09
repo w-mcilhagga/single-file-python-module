@@ -23,7 +23,7 @@ from setuptools import setup
 setup(name="mymodule", version="0.0", author="me", py_modules=["mymodule"])
 ```
 (Here, and everywhere else, replace the name "mymodule" with whatever your module is actually called.) 
-Then in a terminal, go to the folder holding both the `mymodule.py` and `setup.py` files and type (on windows):
+Then in a terminal, go to the folder holding both the `mymodule.py` and `setup.py` files and type (tested only on windows but should work elsewhere):
 
 ```
 py -m pip install .
