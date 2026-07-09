@@ -60,7 +60,7 @@ pip install -e . --config-settings editable_mode=strict
 ```
 to keep it happy.
 
-I guess this is an issue between the people working on setup.py, pylance, and VS Code, far too many of which **aren't being paid** but if the python installation can find the module, then pylance should really be able to as well. 
+I guess this is an issue between the people working on setup.py, pylance, and VS Code, **far too many of whom aren't being paid** but if the python installation can find the module, then pylance should really be able to as well. 
 
 
 ## 2. Distributing it without PyPI.
