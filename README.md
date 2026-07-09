@@ -36,7 +36,7 @@ The `-e` makes an "editable" install, which allows you to change and edit the mo
 ```
 pip install -e . --config-settings editable_mode=compat
 ```
-or
+(which works for me) or
 ```
 pip install -e . --config-settings editable_mode=strict
 ```
