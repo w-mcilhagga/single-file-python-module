@@ -13,7 +13,7 @@ How can you
 2. Distribute it to others without going through PyPI (because let's face it, it isn't really all that great)?
 
 ## 1. Installing it on your own computer.
-A google for how to install a python script brings up a whole lot about `pyproject.toml`, packages, `__init__.py` and so on. 
+A ~google~duckduckgo for how to install a python script brings up a whole lot about `pyproject.toml`, packages, `__init__.py` and so on. 
 **Not necessary**, and overkill for a single file. All you need is a simple `setup.py` file in the same folder as your `mymodule.py` file:
 
 ##### `setup.py`:
